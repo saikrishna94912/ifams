@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <title>LoadPage</title>
+        <script type="text/javascript">
+          function b1clicked() {
+              var pfind = document.getElementById("pfind").value;
+              var branchcd = document.getElementById("branchcd").value;
+              var userlevel = document.getElementById("userlevel").value;
+              var usertype = document.getElementById("usertype").value;
+              var param = "pfindex=" + pfind + "&branchcd=" + branchcd + "&userlevel=" + userlevel + "&usertype=" + usertype;
+              window.open("http://127.0.0.1:7101/SBI_iFAMS-IfamUI-context-root/faces/ifams?" + param, "new");
+          }
+        </script>
+    </head>
+    <body>  
+        <form id="f1" action="submit">
+            <div style="width:100%; height:100%;">
+                <table width="100%">
+                    <tr style="height:250px">
+                        <td width="30%">&nbsp;</td>
+                        <td width="40%">&nbsp;</td>
+                        <td width="30%">&nbsp;</td>
+                    </tr>
+                     
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td width="40%">
+                            <div style="background-color:rgb(82,138,198); border-style:outset; border-width:thin; border-color:Blue;">
+                                <table width="100%">
+                                    <tr>
+                                        <td/>
+                                        <td colspan="2" style="color:white; font-weight:bold;">IFAM User Login</td>
+                                        <td/>
+                                    </tr>
+                                     
+                                    <tr>
+                                        <td/>
+                                        <td style="color:white; font-weight:bold;">User PF Index:</td>
+                                        <td>
+                                            <input type="text" id="pfind" name="pfind"/>
+                                        </td>
+                                        <td/>
+                                    </tr>
+                                     
+                                    <tr>
+                                        <td colspan="4"/>
+                                    </tr>
+                                     
+                                    <tr>
+                                        <td/>
+                                        <td style="color:white; font-weight:bold;">User Branch:</td>
+                                        <td>
+                                            <input type="text" id="branchcd" name="branchcd"/>
+                                        </td>
+                                        <td/>
+                                    </tr>
+                                     
+                                    <!--<tr>
+                    <td/>
+                    <td style="color:white; font-weight:bold;">User Branch:</td>
+                    <td>
+                      <select id="branchcd" name="branchcd">
+                        <option value="249">249 - TRIPLICANE</option>
+                        <option value="252">252 - VANIYAMBADI</option>
+                        <option value="253">253 - TALLAKULAM</option>
+                        <option value="258">258 - MELUR</option>
+                        <option value="261">261 - NANNILAM</option>
+                        <option value="264">264 - POLUR</option>
+                        <option value="265">265 - AMBATTUR IND ESTATE</option>
+                        <option value="267">267 - CHEYYAR</option>
+                        <option value="437">437 - TREASURY BRANCH NASIK</option>
+                        <option value="579">579 - SIRKALI</option>
+                        <option value="755">755 - TIRUPAPULIYUR CUDDALORE</option>
+                        <option value="756">756 - PARAMAGUDI</option>
+                        <option value="758">758 - GINGEE</option>
+                        <option value="759">759 - AVANASHI</option>
+                        <option value="764">764 - UTHAMAPALAYAM</option>
+                        <option value="765">765 - TURAIYUR</option>
+                        <option value="768">768 - TIRUNELVELI TOWN</option>
+                        <option value="774">774 - SRIPERUMBUDUR</option>
+                        <option value="775">775 - WALAJAPET</option>
+                        <option value="776">776 - TIRUCHENDUR</option>
+                        <option value="777">777 - TIRUTTANI</option>
+                        <option value="786">786 - MUDUKULATHUR</option>
+                        <option value="787">787 - TIRUPATTUR</option>
+                        <option value="791">791 - NILAKKOTTAI</option>
+                        <option value="793">793 - ARKONAM</option>
+                        <option value="795">795 - SANKARANAYINARKOIL</option>
+                        <option value="796">796 - PERAMBALUR</option>
+                        <option value="797">797 - PAPANASAM</option>
+                        <option value="799">799 - KODAIKANAL</option>
+                        <option value="800">800 - CHENNAI BRANCH</option>
+                        <option value="804">804 - AMBASAMUDRAM</option>
+                        <option value="807">807 - ARIYALUR</option>
+                        <option value="808">808 - ARNI</option>
+                        <option value="809">809 - SME BRANCH, ARUPPUKKOTTAI</option>
+                        <option value="810">810 - ATTUR</option>
+                        <option value="821">821 - BODINAYAKANUR</option>
+                        <option value="823">823 - CHIDAMBARAM</option>
+                        <option value="824">824 - CHINGELPUT</option>
+                        <option value="827">827 - COIMBATORE</option>
+                        <option value="828">828 - COONOOR</option>
+                        <option value="829">829 - CUDDALORE O T</option>
+                        <option value="831">831 - DHARAPURAM</option>
+                        <option value="832">832 - DHARMAPURI</option>
+                        <option value="835">835 - DINDIGUL</option>
+                        <option value="837">837 - ERODE</option>
+                        <option value="839">839 - GOBICHETTIPALAYAM</option>
+                        <option value="842">842 - GUDIYATHAM</option>
+                        <option value="852">852 - KALLAKURICHI</option>
+                        <option value="853">853 - KANCHEEPURAM</option>
+                        <option value="855">855 - KARAIKKUDI</option>
+                        <option value="856">856 - KARUR</option>
+                        <option value="859">859 - KOVILPATTI</option>
+                        <option value="862">862 - KRISHNAGIRI</option>
+                        <option value="863">863 - KULITHALAI</option>
+                        <option value="864">864 - KUMBAKONAM</option>
+                        <option value="867">867 - KUZHITHURAI</option>
+                        <option value="869">869 - MADURAI</option>
+                        <option value="870">870 - MADURANTAKAM</option>
+                        <option value="872">872 - MANNARGUDI</option>
+                        <option value="875">875 - MAYILADUTHURAI</option>
+                        <option value="877">877 - METTUR DAM</option>
+                        <option value="878">878 - ANNA SALAI</option>
+                        <option value="879">879 - NAGAPATTINAM</option>
+                        <option value="880">880 - SME BRANCH, NAGERCOIL</option>
+                        <option value="881">881 - NAMAKKAL</option>
+                        <option value="891">891 - UDHAGAMANDALAM</option>
+                        <option value="894">894 - PALANI</option>
+                        <option value="896">896 - PATTUKOTTAI</option>
+                        <option value="898">898 - PERIAKULAM</option>
+                        <option value="899">899 - POLLACHI</option>
+                        <option value="900">900 - PONDICHERRY</option>
+                        <option value="902">902 - PUDUKOTTAI</option>
+                        <option value="906">906 - RAJAPALAYAM</option>
+                        <option value="908">908 - RAMANATHAPURAM</option>
+                        <option value="912">912 - SAIDAPET</option>
+                        <option value="913">913 - SALEM</option>
+                        <option value="918">918 - SIVAGANGA</option>
+                        <option value="920">920 - SRIVAIKUNTAM</option>
+                        <option value="921">921 - SRIVILLIPUTHUR</option>
+                        <option value="924">924 - THANJAVUR</option>
+                        <option value="928">928 - TENKASI</option>
+                        <option value="929">929 - TINDIVANAM</option>
+                        <option value="930">930 - TIRUCHIRAPALLI</option>
+                        <option value="931">931 - THIRUMANGALAM</option>
+                        <option value="932">932 - TIRUNELVELI</option>
+                        <option value="934">934 - TIRUPATTUR NA</option>
+                        <option value="935">935 - TIRUPUR</option>
+                        <option value="936">936 - TIRUTHURAIPOONDI</option>
+                        <option value="937">937 - TIRUVALLUR</option>
+                        <option value="938">938 - TIRUVANNAMALAI</option>
+                        <option value="939">939 - TIRUVARUR</option>
+                        <option value="943">943 - SME BRANCH, TUTICORIN</option>
+                        <option value="944">944 - UDUMALPET</option>
+                        <option value="947">947 - VELLORE</option>
+                        <option value="949">949 - VILLUPURAM</option>
+                        <option value="951">951 - VIRUDHUNAGAR</option>
+                        <option value="954">954 - VRIDHACHALAM</option>
+                        <option value="956">956 - GUINDY</option>
+                        <option value="958">958 - NEYVELI</option>
+                        <option value="961">961 - SATTUR</option>
+                        <option value="3972">3972 - Chennai lho</option>
+                        <option value="1111">1111 - GMU - KOLKATA</option>
+                        <option value="1999">1999 - CAO KOLKATA</option>
+                        <option value="3976">3976 - HYDERABAD LOCAL HEAD OFF</option>
+                        <option value="3977">3977 - LOCAL HEAD OFFICE BHOPAL</option>
+                        <option value="3978">3978 - LOCAL HEAD OFFICE</option>
+                        <option value="3980">3980 - BHUBANESWAR L H O</option>
+                        <option value="3999">3999 - CCAD</option>
+                        <option value="3970">3970 - CALCUTTA LHO</option>
+                        <option value="4030">4030 - CAG - CENTRAL</option>
+                        <option value="3971">3971 - LOCAL HEAD OFFICE MUMBAI</option>
+                        <option value="3972">3972 - LOCAL HEAD OFFICE, CHENNAI</option>
+                        <option value="3973">3973 - OFFICE MANAGER LHO</option>
+                        <option value="3974">3974 - LUCKNOW LHO</option>
+                        <option value="3975">3975 - LOCAL HEAD OFFICE A</option>
+                        <option value="4282">4282 - LHO THIRUVANANTHAPURAM</option>
+                        <option value="4425">4425 - MID CORPORATE GROUP</option>
+                        <option value="4454">4454 - SAMG, CC, Mumbai</option>
+                        <option value="5788">5788 - L.H.O. CHANDIGARH</option>
+                        <option value="6939">6939 - GUWAHATI L.H.O.</option>
+                        <option value="7704">7704 - LHO, BANGALORE</option>
+                        <option value="8577">8577 - LHO,</option>
+                        <option value="11339">11339 - Estate Department, Mumbai</option>
+                        <option value="11342">11342 - Estate Department, Belapu</option>
+                        <option value="9277">9277 - SECURITIES SERVICES BRANC</option>
+                        <option value="1115">1115 - dummy branch</option>
+                        <option value="4430">4430 - Corporate Branch</option>
+                        <option value="4791">4791 - OB MUMBAI</option>
+                        <option value="6205">6205 - dummy branch</option>
+                      </select>
+                    </td>
+                    <td/>
+                  </tr>-->
+                                     
+                                    <tr>
+                                        <td colspan="4"/>
+                                    </tr>
+                                     
+                                    <tr>
+                                        <td/>
+                                        <td style="color:white; font-weight:bold;">User Level:</td>
+                                        <td>
+                                            <select id="userlevel" name="branchcd">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>
+                                        </td>
+                                        <td/>
+                                    </tr>
+                                     
+                                    <tr>
+                                        <td colspan="4"/>
+                                    </tr>
+                                     
+                                    <tr>
+                                        <td/>
+                                        <td style="color:white; font-weight:bold;">User Type:</td>
+                                        <td>
+                                            <select id="usertype" name="branchcd">
+                                                <option value="13">Special Admin</option>
+                                                <option value="A">Audit</option>
+                                                <option value="N" selected="selected">Normal User</option>
+                                            </select>
+                                        </td>
+                                        <td/>
+                                    </tr>
+                                     
+                                    <tr>
+                                        <td/>
+                                        <td colspan="2" align="center">
+                                            <input type="button" id="b1" name="b1" value="Login" onclick="b1clicked()"/>
+                                        </td>
+                                        <td/>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                     
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>
